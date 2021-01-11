@@ -1,0 +1,23 @@
+
+{
+  "name": "podlibre/podcast-namespace",
+  "description": "PHP implementation for the Podcast Namespace.",
+  "homepage": "https://code.podlibre.org/podlibre/podcastnamespace",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Benjamin Bellamy",
+      "email": "ben@podlibre.org",
+      "homepage": "https://podlibre.org/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Podlibre\\PodcastNamespace\\": "src/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": "@php src/ReversedTaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-en.json >  src/ReversedTaxonomy.php",
+    "post-update-cmd": "@php src/ReversedTaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-en.json >  src/ReversedTaxonomy.php"
+  }
+}
