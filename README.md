@@ -6,6 +6,9 @@ This project fetches data from the podcast namespace.
 
 You probably need something like this in your composer.json:
 ```
+"require": {
+    "podlibre/podcast-namespace": "^1.0"
+  },
 "scripts": {
     "post-install-cmd": [
       "@php vendor/podlibre/podcast-namespace/src/TaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-en.json >  app/Language/en/Taxonomy.php",
