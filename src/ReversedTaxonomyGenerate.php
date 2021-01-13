@@ -25,7 +25,7 @@ $group = null;
 $taxonomy_array=[];
 foreach($taxonomy as $line) {
 	$newgroup=slug(substr($line['key'],0,strpos($line['key'],'/')));
-	if($group!=$newgroup) {
+	if($group!==$newgroup) {
 		$group=$newgroup;
 		$taxonomy_array[$line['group']]=['slug' => $group];
 	}
