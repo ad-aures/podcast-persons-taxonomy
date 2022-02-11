@@ -1,8 +1,8 @@
 
 {
-  "name": "adaures/podcast-namespace",
+  "name": "adaures/podcast-persons-taxonomy",
   "description": "Generate PHP translation files for CodeIgniter4 from the podcast-namespace's Persons Taxonomy json files.",
-  "homepage": "https://code.castopod.org/ad-aures/podcast-namespace",
+  "homepage": "https://code.castopod.org/ad-aures/podcast-persons-taxonomy",
   "license": "MIT",
   "authors": [
     {
@@ -18,7 +18,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "AdAures\\PodcastNamespace\\": "src/"
+      "AdAures\\PodcastPersonsTaxonomy\\": "src/"
     }
   },
   "scripts": {

@@ -67,12 +67,14 @@ foreach ($taxonomy as $line) {
     ];
 }
 
+$currentYear = date("Y");
+
 // autogenerate database
 print <<<EOT
 <?php
 
 /**
- * @copyright  2022 Ad Aures
+ * @copyright  {$currentYear} Ad Aures
  * @license    https://www.gnu.org/licenses/agpl-3.0.en.html AGPL3
  * @link       https://castopod.org/
  */
