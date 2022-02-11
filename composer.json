@@ -1,19 +1,24 @@
 
 {
-  "name": "podlibre/podcast-namespace",
-  "description": "PHP implementation for the Podcast Namespace.",
-  "homepage": "https://code.podlibre.org/podlibre/podcastnamespace",
+  "name": "adaures/podcast-namespace",
+  "description": "Generate PHP translation files for CodeIgniter4 from the podcast-namespace's Persons Taxonomy json files.",
+  "homepage": "https://code.castopod.org/ad-aures/podcast-namespace",
   "license": "MIT",
   "authors": [
     {
       "name": "Benjamin Bellamy",
-      "email": "ben@podlibre.org",
-      "homepage": "https://podlibre.org/"
+      "email": "ben@castopod.org",
+      "homepage": "https://code.castopod.org/benjamin"
+    },
+    {
+      "name": "Yassine Doghri",
+      "email": "yassine@doghri.fr",
+      "homepage": "https://code.castopod.org/yassine"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Podlibre\\PodcastNamespace\\": "src/"
+      "AdAures\\PodcastNamespace\\": "src/"
     }
   },
   "scripts": {

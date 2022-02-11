@@ -1,19 +1,25 @@
 # PodcastNamespace
 
-This project fetches data from the podcast namespace.
+Generate PHP translation files for CodeIgniter4 from the podcast-namespace's Persons Taxonomy json files.
+
+> See: https://github.com/Podcastindex-org/podcast-namespace
 
 ## Usage
 
-You probably need something like this in your composer.json:
+Install using composer:
+
+```bash
+composer install adaures/podcast-namespace
 ```
-"require": {
-    "podlibre/podcast-namespace": "^1.0"
-  },
+
+You will have to add a `post-install-cmd` script in your composer.json to generate the translations :
+
+```json
 "scripts": {
     "post-install-cmd": [
-      "@php vendor/podlibre/podcast-namespace/src/TaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-en.json >  app/Language/en/Taxonomy.php",
-      "@php vendor/podlibre/podcast-namespace/src/TaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-fr.json >  app/Language/fr/Taxonomy.php",
-      "@php vendor/podlibre/podcast-namespace/src/ReversedTaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-en.json >  vendor/podlibre/podcast-namespace/src/ReversedTaxonomy.php",
+      "@php vendor/adaures/podcast-namespace/src/TaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-en.json > app/Language/en/Taxonomy.php",
+      "@php vendor/adaures/podcast-namespace/src/TaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-fr.json > app/Language/fr/Taxonomy.php",
+      "@php vendor/adaures/podcast-namespace/src/ReversedTaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-en.json > vendor/adaures/podcast-namespace/src/ReversedTaxonomy.php",
     ]
 }
 ```
