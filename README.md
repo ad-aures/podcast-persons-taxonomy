@@ -2,17 +2,37 @@
 
 Generate PHP translation files for CodeIgniter4 from the podcast-namespace's Persons Taxonomy json files.
 
-> See: https://github.com/Podcastindex-org/podcast-namespace
+> See: <https://github.com/Podcastindex-org/podcast-namespace>
 
 ## Usage
 
-Install using composer:
+### Install using composer
 
 ```bash
-composer install adaures/podcast-persons-taxonomy
+composer require adaures/podcast-persons-taxonomy
 ```
 
-You will have to add a `post-install-cmd` script in your composer.json to generate the translations:
+### Generate translations
+
+```bash
+# english taxonomy
+php src/TaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-en.json > path/to/en/OutputTaxonomy.php
+```
+
+```bash
+# french taxonomy
+php src/TaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-fr.json > path/to/fr/OutputTaxonomy.php
+```
+
+### Generate reversed taxonomy
+
+```bash
+php src/ReversedTaxonomyGenerate.php https://raw.githubusercontent.com/Podcastindex-org/podcast-namespace/main/taxonomy-en.json > path/to/OutputReversedTaxonomy.php
+```
+
+### Composer.json scripts
+
+You may want to add `post-install-cmd` and `post-update-cmd` scripts to your `composer.json` to generate the translations and reversed taxonomy:
 
 ```json
 "scripts": {
