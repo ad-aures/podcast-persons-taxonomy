@@ -2,7 +2,7 @@
 {
   "name": "adaures/podcast-persons-taxonomy",
   "description": "Generate PHP translation files for CodeIgniter4 from the podcast-namespace's Persons Taxonomy json files.",
-  "homepage": "https://code.castopod.org/ad-aures/podcast-persons-taxonomy",
+  "homepage": "https://code.castopod.org/adaures/podcast-persons-taxonomy",
   "license": "MIT",
   "authors": [
     {
